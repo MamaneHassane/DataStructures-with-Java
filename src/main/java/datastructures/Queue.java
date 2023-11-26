@@ -12,14 +12,14 @@ public class Queue {
             this.tail.nextNode = this.head;
         }
         else {
-            node.nextNode = this.tail;
+            this.tail.nextNode = node;
             this.tail = node;
         }
         this.size++;
     }
-    public Node pop(){
+    public void pop(){
         if(this.head == null){
-            return null;
+            return;
         }
         Node node = this.head;
         this.head = this.head.nextNode;
@@ -27,7 +27,6 @@ public class Queue {
         if(this.head == null){
             this.tail = null;
         }
-        return node;
     }
 
     public Queue(){
@@ -44,8 +43,11 @@ public class Queue {
         queue.push(1);
         queue.push(-1);
         queue.push(-7);
-        // System.out.println(queue);
-
+        System.out.println(queue);
+        System.out.println(queue.size());
+        queue.pop();
+        System.out.println(queue);
+        System.out.println(queue.size());
     }
 }
 

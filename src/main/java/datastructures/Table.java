@@ -1,5 +1,7 @@
 package datastructures;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Table {
     int size;
     int[] values;
@@ -20,7 +22,7 @@ public class Table {
         }
     }
 
-    public void addListOfValues(int[] valuesToAdd) {
+    public void addListOfValues(@NotNull int[] valuesToAdd) {
         // Ajouter une liste de valeurs à la table
         for (int value : valuesToAdd) {
             addValue(value);
@@ -29,12 +31,18 @@ public class Table {
 
     // Tasser les éléments à partir d'un index
     public void packDown(int index) {
-        
+        for(int i=index+1; i<=this.size-1; i++){
+            values[i-1] = values[i];
+        }
+        this.size--;
     }
 
     // Pousser les éléments à partir d'un index
     public void packUp(int index, int numberOfPlaces) {
-       
+        this.size+=numberOfPlaces;
+       for(int i=this.size-1; i>=index; i++){
+           values[i+numberOfPlaces] = values[i];
+       }
     }
 
     // Supprimer à partir d'un index (tasser)

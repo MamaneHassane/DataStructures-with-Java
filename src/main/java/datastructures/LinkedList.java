@@ -28,7 +28,7 @@ public class LinkedList {
     
     //Delete a node by using value, delete all occurrences
     public void deleteNodeByValue(int value) {
-        
+        if(this)
     }
 
     //Print the list
