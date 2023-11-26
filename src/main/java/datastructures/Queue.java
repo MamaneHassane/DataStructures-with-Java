@@ -4,7 +4,7 @@ public class Queue {
     Node head;
     Node tail;
     int size;
-    void push(int value){
+    public void push(int value){
         Node node = new Node(value);
         if(this.head==null && this.tail==null){
             this.head = this.tail = node;
@@ -17,7 +17,7 @@ public class Queue {
         }
         this.size++;
     }
-    Node pop(){
+    public Node pop(){
         if(this.head == null){
             return null;
         }
@@ -35,9 +35,16 @@ public class Queue {
         this.size = 0;
     }
     public int size(){return this.size;}
-
-    public static void main(String[] a){
+    public String toString(){
+        return this.head.printNodeChain("");
+    }
+    public static void main(String[] args){
         Queue queue = new Queue();
+        queue.push(0);
+        queue.push(1);
+        queue.push(-1);
+        queue.push(-7);
+        // System.out.println(queue);
 
     }
 }
