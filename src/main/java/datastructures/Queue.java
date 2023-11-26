@@ -18,14 +18,27 @@ public class Queue {
         this.size++;
     }
     Node pop(){
+        if(this.head == null){
+            return null;
+        }
         Node node = this.head;
         this.head = this.head.nextNode;
         this.size--;
+        if(this.head == null){
+            this.tail = null;
+        }
         return node;
     }
+
     public Queue(){
         this.head = this.tail = null;
         this.size = 0;
     }
     public int size(){return this.size;}
+
+    public static void main(String[] a){
+        Queue queue = new Queue();
+
+    }
 }
+
