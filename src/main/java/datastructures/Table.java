@@ -77,5 +77,11 @@ public class Table {
         Table table = new Table(20);
         table.addListOfValues(new int[]{1, 2, 3, 4, -5});
         System.out.println(table);
+        table.deleteByValue(3);
+        System.out.println(table);
+        table.deleteByValue(-5);
+        System.out.println(table);
+        table.deleteByValue(1);
+        System.out.println(table);
     }
 }

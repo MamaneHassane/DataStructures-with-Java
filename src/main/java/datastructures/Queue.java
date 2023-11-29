@@ -21,7 +21,6 @@ public class Queue {
         if(this.head == null){
             return;
         }
-        Node node = this.head;
         this.head = this.head.nextNode;
         this.size--;
         if(this.head == null){

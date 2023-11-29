@@ -10,6 +10,9 @@ public class Node {
     public void setNextNode(Node node){
         this.nextNode = node;
     }
+    public String toString(){
+        return Integer.toString(this.value);
+    }
     public String printNodeChain(String result){
         result += Integer.toString(this.value)+"-->";
         if(this.nextNode==null) return result;
