@@ -8,7 +8,7 @@ public class Stack {
         this.size++;
     }
     public void setTop(Node node) {
-        this.top = nod e;
+        this.top = node;
     }
     public void push(int value) {
         Node nodeToPush = new Node(value);
