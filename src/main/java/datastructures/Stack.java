@@ -16,14 +16,14 @@ public class Stack {
         this.setTop(nodeToPush);
         this.size++;
     }
-    public void pop(){
+    public void pop() {
          this.setTop(this.top.nextNode);
          this.size--;
     }
-    public int size(){
+    public int size() {
         return this.size;
     }
-    public String toString(){
+    public String toString() {
         return this.top.printNodeChain("Top:");
     }
 
